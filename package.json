@@ -1,0 +1,20 @@
+{
+  "name": "wsplaay",
+  "description": "WebSocket to Telnet proxy",
+  "version": "0.0.1",
+  "author": "Francesco Orsenigo",
+  "main": "index.js",
+  "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xarvh/wsplay"
+  },
+  "dependencies": {
+    "coffee-script": ">=1.7.1",
+    "websocket": ">=1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  }
+}
