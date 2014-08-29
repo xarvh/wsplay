@@ -9,7 +9,7 @@
   }
   .error {
     color: red;
-  } 
+  }
   .response {
     color: blue;
   }
@@ -33,7 +33,7 @@
     -webkit-border-radius: 15px;
     -moz-box-shadow: 10px 10px 10px #000000;
     -webkit-box-shadow: 10px 10px 10px #000000;
-  } 
+  }
   </style>
   <script language="javascript" type="text/javascript">
   var output;
@@ -44,12 +44,12 @@
   function connect(){
     //open socket
     if ("WebSocket" in window){
-      websocket = new WebSocket("ws://127.0.1.1:5000");
+      websocket = new WebSocket("ws://127.0.1.1:8080", "mud-telnet");
       //note this server does nothing but echo what was passed
       //use a more elaborate server for more interesting behavior
-  
+
       output.innerHTML = "connecting..." ;
-  
+
       //attach event handlers
       websocket.onopen = onOpen;
       websocket.onclose = onClose;
@@ -85,7 +85,7 @@
     websocket.send(message);
     output.innerHTML += "<p>MESSAGE SENT: " + message + "</p>";
   } // end sendMessage
-  
+
   </script>
 </head>
 <body onload = "init()">
@@ -114,5 +114,3 @@
   <div id="output">Click 'connect' button to connect</div>
 </body>
 </html>
-
-
